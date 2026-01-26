@@ -33,7 +33,7 @@ export interface DNAConfig {
 }
 
 export const DNA_CONFIG: DNAConfig = {
-  version: "1.0",
+  version: "1.1",
   lastUpdated: "2025-01-27",
   workflow: {
     name: "purchase-order-approval",
@@ -43,20 +43,20 @@ export const DNA_CONFIG: DNAConfig = {
     {
       level: 1,
       minAmount: 0,
-      maxAmount: 1000000,
+      maxAmount: 500000,
       role: "MANAGER",
       slaHours: 24,
     },
     {
       level: 2,
-      minAmount: 1000000,
-      maxAmount: 10000000,
+      minAmount: 500000,
+      maxAmount: 5000000,
       role: "DIRECTOR",
       slaHours: 48,
     },
     {
       level: 3,
-      minAmount: 10000000,
+      minAmount: 5000000,
       maxAmount: null,
       role: "CEO",
       slaHours: 72,
