@@ -1,0 +1,54 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  role      String   @default("STAFF") // STAFF, MANAGER, DIRECTOR, CEO
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  createdPOs  PurchaseOrder[] @relation("CreatedBy")
+  approvedPOs PurchaseOrder[] @relation("ApprovedBy")
+  logs        ApprovalLog[]
+}
+
+model PurchaseOrder {
+  id          String    @id @default(cuid())
+  poNumber    String    @unique
+  title       String
+  description String?
+  amount      Float
+  vendor      String?
+  status      String    @default("DRAFT") // DRAFT, PENDING_APPROVAL, APPROVED, REJECTED
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  submittedAt DateTime?
+  resolvedAt  DateTime?
+
+  createdById  String
+  createdBy    User    @relation("CreatedBy", fields: [createdById], references: [id])
+  approvedById String?
+  approvedBy   User?   @relation("ApprovedBy", fields: [approvedById], references: [id])
+
+  logs ApprovalLog[]
+}
+
+model ApprovalLog {
+  id        String   @id @default(cuid())
+  action    String
+  comment   String?
+  createdAt DateTime @default(now())
+
+  poId   String
+  po     PurchaseOrder @relation(fields: [poId], references: [id])
+  userId String
+  user   User          @relation(fields: [userId], references: [id])
+}
