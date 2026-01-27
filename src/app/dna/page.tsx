@@ -1,5 +1,6 @@
 import { DNA_CONFIG } from '@/generated/dna-config'
 import { formatCurrency, getRoleDisplayName } from '@/lib/rules'
+import Link from 'next/link'
 
 export default function DNAConfigPage() {
   return (
@@ -11,9 +12,18 @@ export default function DNAConfigPage() {
             Business rules automatically synced from DNA Repository
           </p>
         </div>
-        <div className="text-right">
-          <div className="text-sm text-gray-500">Version</div>
-          <div className="font-mono text-lg">{DNA_CONFIG.version}</div>
+        <div className="flex items-center gap-4">
+          <Link
+            href="/dna/edit"
+            className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all flex items-center gap-2 font-medium"
+          >
+            <span>🤖</span>
+            Edit dengan AI
+          </Link>
+          <div className="text-right">
+            <div className="text-sm text-gray-500">Version</div>
+            <div className="font-mono text-lg">{DNA_CONFIG.version}</div>
+          </div>
         </div>
       </div>
 
