@@ -15,6 +15,8 @@
         .flow-arrow { animation: pulse 2s infinite; }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
         .step-number { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: bold; }
+        .ai-glow { box-shadow: 0 0 30px rgba(102, 126, 234, 0.3); }
+        .ui-glow { box-shadow: 0 0 30px rgba(249, 115, 22, 0.3); }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -22,16 +24,222 @@
     <header class="gradient-bg text-white py-16">
         <div class="container mx-auto px-6 text-center">
             <h1 class="text-5xl font-bold mb-4">DNA-Driven ERP System</h1>
-            <p class="text-xl opacity-90 mb-6">Sistem ERP yang Otomatis Berubah Berdasarkan Perubahan Business Rules</p>
-            <div class="flex justify-center gap-4">
-                <span class="px-4 py-2 bg-white/20 rounded-full text-sm">AI-Powered</span>
+            <p class="text-xl opacity-90 mb-6">Sistem ERP dengan Auto UI Generation & AI-Powered Configuration</p>
+            <div class="flex justify-center gap-4 flex-wrap">
                 <span class="px-4 py-2 bg-white/20 rounded-full text-sm">Auto-Deploy</span>
                 <span class="px-4 py-2 bg-white/20 rounded-full text-sm">Real-time Sync</span>
+                <span class="px-4 py-2 bg-white/20 rounded-full text-sm flex items-center gap-1">
+                    <span>🎨</span> UI Automate
+                </span>
+                <span class="px-4 py-2 bg-white/20 rounded-full text-sm flex items-center gap-1">
+                    <span>🤖</span> AI Layer (Claude)
+                </span>
             </div>
         </div>
     </header>
 
     <main class="container mx-auto px-6 py-12">
+        <!-- NEW: Two Key Features -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Dua Fitur Utama</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- UI Automate -->
+                <div class="bg-gradient-to-r from-orange-500 to-pink-500 rounded-2xl p-8 text-white ui-glow">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="text-5xl">🎨</span>
+                        <div>
+                            <h3 class="text-2xl font-bold">UI Automate</h3>
+                            <p class="text-orange-100">Visual Drag & Drop Layout Editor</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start gap-3">
+                            <span class="bg-white/20 rounded-full w-6 h-6 flex items-center justify-center text-sm flex-shrink-0">1</span>
+                            <span>Drag komponen ke canvas (card, table, chart, dll)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-white/20 rounded-full w-6 h-6 flex items-center justify-center text-sm flex-shrink-0">2</span>
+                            <span>Resize, reorder, edit properties</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-white/20 rounded-full w-6 h-6 flex items-center justify-center text-sm flex-shrink-0">3</span>
+                            <span>Auto-generate Markdown dari layout</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-white/20 rounded-full w-6 h-6 flex items-center justify-center text-sm flex-shrink-0">4</span>
+                            <span>Save ke DNA → UI otomatis ter-render!</span>
+                        </li>
+                    </ul>
+                    <a href="http://103.93.130.17:5000/dna/layout-editor" target="_blank"
+                       class="inline-flex items-center gap-2 bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        🎨 Buka Layout Editor
+                    </a>
+                </div>
+
+                <!-- AI Layer -->
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white ai-glow">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="text-5xl">🤖</span>
+                        <div>
+                            <h3 class="text-2xl font-bold">AI Layer (Claude)</h3>
+                            <p class="text-blue-100">Natural Language Configuration</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start gap-3">
+                            <span class="bg-white/20 rounded-full w-6 h-6 flex items-center justify-center text-sm flex-shrink-0">1</span>
+                            <span>Ketik perintah dalam bahasa manusia</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-white/20 rounded-full w-6 h-6 flex items-center justify-center text-sm flex-shrink-0">2</span>
+                            <span>Claude AI menerjemahkan ke konfigurasi</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-white/20 rounded-full w-6 h-6 flex items-center justify-center text-sm flex-shrink-0">3</span>
+                            <span>Preview perubahan sebelum apply</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-white/20 rounded-full w-6 h-6 flex items-center justify-center text-sm flex-shrink-0">4</span>
+                            <span>Terapkan → Sistem auto-update!</span>
+                        </li>
+                    </ul>
+                    <a href="http://103.93.130.17:5000/dna/edit" target="_blank"
+                       class="inline-flex items-center gap-2 bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        🤖 Buka AI Editor
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- UI Automate Detail -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 gradient-text">UI Automate - Layout Editor</h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="grid md:grid-cols-3">
+                    <!-- Component Palette -->
+                    <div class="p-6 border-r bg-gray-50">
+                        <h3 class="font-semibold text-lg mb-4 flex items-center gap-2">
+                            <span class="text-2xl">📦</span> Component Palette
+                        </h3>
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-3 p-3 bg-white rounded-lg border">
+                                <span class="text-xl">📊</span>
+                                <span class="text-sm">Summary Card</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-white rounded-lg border">
+                                <span class="text-xl">🎯</span>
+                                <span class="text-sm">KPI Card</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-white rounded-lg border">
+                                <span class="text-xl">📋</span>
+                                <span class="text-sm">Data Table</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-white rounded-lg border">
+                                <span class="text-xl">📈</span>
+                                <span class="text-sm">Bar Chart</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-white rounded-lg border">
+                                <span class="text-xl">🥧</span>
+                                <span class="text-sm">Pie Chart</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-white rounded-lg border">
+                                <span class="text-xl">✅</span>
+                                <span class="text-sm">Approval List</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Canvas -->
+                    <div class="p-6 border-r">
+                        <h3 class="font-semibold text-lg mb-4 flex items-center gap-2">
+                            <span class="text-2xl">🖼️</span> Canvas (Drop Zone)
+                        </h3>
+                        <div class="border-2 border-dashed border-gray-300 rounded-xl p-4 min-h-[300px] bg-gray-50">
+                            <div class="grid grid-cols-3 gap-2">
+                                <div class="bg-yellow-100 border-2 border-yellow-300 rounded-lg p-2 text-center text-xs">
+                                    <span class="text-lg">📊</span><br>Pending
+                                </div>
+                                <div class="bg-green-100 border-2 border-green-300 rounded-lg p-2 text-center text-xs">
+                                    <span class="text-lg">📊</span><br>Approved
+                                </div>
+                                <div class="bg-red-100 border-2 border-red-300 rounded-lg p-2 text-center text-xs">
+                                    <span class="text-lg">📊</span><br>Rejected
+                                </div>
+                                <div class="col-span-3 bg-white border-2 border-gray-300 rounded-lg p-3 text-center text-xs">
+                                    <span class="text-lg">📋</span><br>Data Table (Full Width)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- AI Chat + Properties -->
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg mb-4 flex items-center gap-2">
+                            <span class="text-2xl">🤖</span> AI Chat (Bonus!)
+                        </h3>
+                        <div class="bg-gray-100 rounded-lg p-3 mb-4 text-sm">
+                            <div class="bg-blue-600 text-white rounded-lg p-2 mb-2 ml-4">
+                                "Tambahkan 3 summary card"
+                            </div>
+                            <div class="bg-white rounded-lg p-2 shadow-sm">
+                                Saya menambahkan 3 summary card untuk Pending, Approved, Rejected
+                            </div>
+                        </div>
+                        <div class="bg-purple-50 border border-purple-200 rounded-lg p-3 text-sm">
+                            <div class="font-semibold text-purple-700 mb-2">AI di Layout Editor:</div>
+                            <p class="text-purple-600">Bisa juga pakai chat AI untuk menambah komponen secara otomatis!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Layer Detail -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 gradient-text">AI Layer - Claude Integration</h2>
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-purple-700">Apa itu AI Layer?</h3>
+                        <p class="text-gray-600 mb-4">
+                            AI Layer adalah integrasi <strong>Claude (Anthropic)</strong> ke dalam sistem DNA yang memungkinkan
+                            user mengubah konfigurasi menggunakan <strong>bahasa manusia (natural language)</strong>.
+                        </p>
+                        <p class="text-gray-600 mb-4">
+                            Claude AI bertindak sebagai "translator" yang mengubah perintah manusia menjadi konfigurasi teknis
+                            yang dapat dipahami sistem.
+                        </p>
+                        <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
+                            <div class="font-semibold text-purple-700 mb-2">AI Layer digunakan di:</div>
+                            <ul class="text-purple-600 space-y-1 text-sm">
+                                <li>• <strong>DNA Rules Editor</strong> - Edit approval thresholds, SLA, settings</li>
+                                <li>• <strong>Layout Editor</strong> - Generate komponen via chat</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-purple-700">Contoh Perintah AI:</h3>
+                        <div class="space-y-3">
+                            <div class="bg-gray-100 rounded-lg p-3">
+                                <div class="text-xs text-gray-500 mb-1">Rules Editor:</div>
+                                <div class="text-sm font-medium">"Ubah threshold manager menjadi 5 juta"</div>
+                            </div>
+                            <div class="bg-gray-100 rounded-lg p-3">
+                                <div class="text-xs text-gray-500 mb-1">Rules Editor:</div>
+                                <div class="text-sm font-medium">"Kurangi SLA director jadi 24 jam"</div>
+                            </div>
+                            <div class="bg-gray-100 rounded-lg p-3">
+                                <div class="text-xs text-gray-500 mb-1">Layout Editor:</div>
+                                <div class="text-sm font-medium">"Tambahkan 3 summary card untuk status PO"</div>
+                            </div>
+                            <div class="bg-gray-100 rounded-lg p-3">
+                                <div class="text-xs text-gray-500 mb-1">Layout Editor:</div>
+                                <div class="text-sm font-medium">"Tambahkan pie chart dan bar chart"</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Problem & Solution -->
         <section class="mb-16">
             <div class="grid md:grid-cols-2 gap-8">
@@ -39,79 +247,43 @@
                     <h2 class="text-2xl font-bold text-red-700 mb-4">Masalah Tradisional</h2>
                     <ul class="space-y-3 text-gray-700">
                         <li class="flex items-start gap-3">
-                            <span class="text-red-500 mt-1">&#10007;</span>
-                            <span>Perubahan business rules membutuhkan developer</span>
+                            <span class="text-red-500 mt-1">✗</span>
+                            <span>Perubahan UI/rules membutuhkan developer</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-red-500 mt-1">&#10007;</span>
+                            <span class="text-red-500 mt-1">✗</span>
                             <span>Proses deployment manual dan berisiko error</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-red-500 mt-1">&#10007;</span>
+                            <span class="text-red-500 mt-1">✗</span>
                             <span>Dokumentasi SOP terpisah dari implementasi</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-red-500 mt-1">&#10007;</span>
+                            <span class="text-red-500 mt-1">✗</span>
                             <span>Waktu tunggu perubahan bisa berhari-hari</span>
                         </li>
                     </ul>
                 </div>
                 <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg card-hover">
-                    <h2 class="text-2xl font-bold text-green-700 mb-4">Solusi DNA-Driven</h2>
+                    <h2 class="text-2xl font-bold text-green-700 mb-4">Solusi DNA + AI + UI Automate</h2>
                     <ul class="space-y-3 text-gray-700">
                         <li class="flex items-start gap-3">
-                            <span class="text-green-500 mt-1">&#10003;</span>
-                            <span>Business rules dalam format Markdown yang mudah diedit</span>
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span><strong>Tim QM bisa edit UI & rules</strong> tanpa coding</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-green-500 mt-1">&#10003;</span>
-                            <span>Deployment otomatis via webhook & CI/CD</span>
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span><strong>AI (Claude) menerjemahkan</strong> perintah natural</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-green-500 mt-1">&#10003;</span>
-                            <span>Dokumentasi = Implementasi (Single Source of Truth)</span>
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span><strong>Drag & drop</strong> untuk desain UI</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="text-green-500 mt-1">&#10003;</span>
-                            <span>Perubahan diterapkan dalam hitungan menit</span>
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span><strong>Perubahan diterapkan dalam ~1 menit</strong></span>
                         </li>
                     </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- What is DNA -->
-        <section class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Apa itu DNA Repository?</h2>
-            <div class="bg-white rounded-xl shadow-lg p-8">
-                <div class="grid md:grid-cols-2 gap-8 items-center">
-                    <div>
-                        <p class="text-lg text-gray-600 mb-6">
-                            <strong>DNA (Documentation as Application)</strong> adalah konsep dimana dokumen business rules
-                            (SOP, workflow, approval threshold) ditulis dalam format Markdown yang dapat dibaca manusia
-                            sekaligus di-parse oleh sistem.
-                        </p>
-                        <p class="text-gray-600">
-                            Ketika dokumen DNA diubah, sistem secara otomatis membaca perubahan dan mengupdate
-                            aplikasi ERP tanpa perlu coding manual.
-                        </p>
-                    </div>
-                    <div class="bg-gray-900 rounded-lg p-4 text-sm">
-                        <div class="text-gray-400 mb-2"># rules/approval-thresholds.md</div>
-                        <pre class="text-green-400 overflow-x-auto"><code>---
-type: rule
-name: approval-thresholds
-version: "1.2"
----
-
-# Approval Thresholds
-
-| Level | Min Amount | Max Amount | Role |
-|-------|------------|------------|------|
-| 1     | 0          | 499,999    | MANAGER |
-| 2     | 500,000    | 4,999,999  | DIRECTOR |
-| 3     | 5,000,000  | unlimited  | CEO |</code></pre>
-                    </div>
                 </div>
             </div>
         </section>
@@ -120,71 +292,63 @@ version: "1.2"
         <section class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Arsitektur Sistem</h2>
             <div class="bg-white rounded-xl shadow-lg p-8">
-                <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
-                    <!-- DNA Repo -->
-                    <div class="bg-blue-100 rounded-xl p-6 w-48 card-hover">
-                        <div class="text-4xl mb-2">📄</div>
-                        <div class="font-bold text-blue-800">DNA Repository</div>
-                        <div class="text-sm text-blue-600">GitHub</div>
-                        <div class="text-xs text-gray-500 mt-2">Markdown Files</div>
+                <div class="grid grid-cols-5 gap-4 text-center items-center">
+                    <!-- User -->
+                    <div class="bg-blue-100 rounded-xl p-4 card-hover">
+                        <div class="text-3xl mb-2">👤</div>
+                        <div class="font-bold text-blue-800 text-sm">User</div>
+                        <div class="text-xs text-blue-600">QM / IT Team</div>
                     </div>
-
-                    <div class="text-3xl text-gray-400 flow-arrow">→</div>
-
-                    <!-- Webhook -->
-                    <div class="bg-yellow-100 rounded-xl p-6 w-48 card-hover">
-                        <div class="text-4xl mb-2">🔔</div>
-                        <div class="font-bold text-yellow-800">Webhook</div>
-                        <div class="text-sm text-yellow-600">GitHub Actions</div>
-                        <div class="text-xs text-gray-500 mt-2">Auto Trigger</div>
+                    <div class="text-2xl text-gray-400 flow-arrow">→</div>
+                    <!-- Tools -->
+                    <div class="space-y-2">
+                        <div class="bg-orange-100 rounded-xl p-3 card-hover">
+                            <div class="text-xl mb-1">🎨</div>
+                            <div class="font-bold text-orange-800 text-xs">Layout Editor</div>
+                        </div>
+                        <div class="bg-purple-100 rounded-xl p-3 card-hover">
+                            <div class="text-xl mb-1">🤖</div>
+                            <div class="font-bold text-purple-800 text-xs">AI Editor</div>
+                        </div>
                     </div>
-
-                    <div class="text-3xl text-gray-400 flow-arrow">→</div>
-
-                    <!-- Orchestrator -->
-                    <div class="bg-purple-100 rounded-xl p-6 w-48 card-hover">
-                        <div class="text-4xl mb-2">⚙️</div>
-                        <div class="font-bold text-purple-800">Orchestrator</div>
-                        <div class="text-sm text-purple-600">Node.js Server</div>
-                        <div class="text-xs text-gray-500 mt-2">Parse & Transform</div>
-                    </div>
-
-                    <div class="text-3xl text-gray-400 flow-arrow">→</div>
-
-                    <!-- ERP Web -->
-                    <div class="bg-green-100 rounded-xl p-6 w-48 card-hover">
-                        <div class="text-4xl mb-2">🌐</div>
-                        <div class="font-bold text-green-800">ERP Web</div>
-                        <div class="text-sm text-green-600">Next.js + SQLite</div>
-                        <div class="text-xs text-gray-500 mt-2">Auto Rebuild</div>
+                    <div class="text-2xl text-gray-400 flow-arrow">→</div>
+                    <!-- DNA + Deploy -->
+                    <div class="space-y-2">
+                        <div class="bg-yellow-100 rounded-xl p-3 card-hover">
+                            <div class="text-xl mb-1">📄</div>
+                            <div class="font-bold text-yellow-800 text-xs">DNA Repo</div>
+                        </div>
+                        <div class="bg-green-100 rounded-xl p-3 card-hover">
+                            <div class="text-xl mb-1">🚀</div>
+                            <div class="font-bold text-green-800 text-xs">Auto Deploy</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Flow Detail -->
-        <section class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Alur Kerja Detail</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-                    <div class="step-number bg-blue-500 text-white mb-4">1</div>
-                    <h3 class="font-bold text-lg mb-2">Edit DNA File</h3>
-                    <p class="text-gray-600 text-sm">User mengedit file Markdown di GitHub (ubah threshold, rules, workflow)</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-                    <div class="step-number bg-yellow-500 text-white mb-4">2</div>
-                    <h3 class="font-bold text-lg mb-2">Commit & Push</h3>
-                    <p class="text-gray-600 text-sm">Perubahan di-commit dan di-push ke repository GitHub</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-                    <div class="step-number bg-purple-500 text-white mb-4">3</div>
-                    <h3 class="font-bold text-lg mb-2">Webhook Trigger</h3>
-                    <p class="text-gray-600 text-sm">GitHub Actions mengirim webhook ke Orchestrator server</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-                    <div class="step-number bg-green-500 text-white mb-4">4</div>
-                    <h3 class="font-bold text-lg mb-2">Auto Deploy</h3>
-                    <p class="text-gray-600 text-sm">Orchestrator pull, parse DNA, update config, build & restart ERP</p>
+                <!-- Flow Details -->
+                <div class="mt-8 grid md:grid-cols-2 gap-6">
+                    <div class="p-4 bg-orange-50 rounded-xl">
+                        <h4 class="font-semibold text-orange-700 mb-3">🎨 UI Automate Flow:</h4>
+                        <div class="text-sm text-orange-600 space-y-1">
+                            <div>1. User drag & drop komponen di Layout Editor</div>
+                            <div>2. (Opsional) Gunakan AI chat untuk generate komponen</div>
+                            <div>3. Save → Auto-generate Markdown + JSON</div>
+                            <div>4. Commit ke GitHub → Webhook trigger</div>
+                            <div>5. Orchestrator generate layout-config.ts</div>
+                            <div>6. ERP rebuild → UI ter-render otomatis!</div>
+                        </div>
+                    </div>
+                    <div class="p-4 bg-purple-50 rounded-xl">
+                        <h4 class="font-semibold text-purple-700 mb-3">🤖 AI Layer Flow:</h4>
+                        <div class="text-sm text-purple-600 space-y-1">
+                            <div>1. User ketik perintah bahasa manusia</div>
+                            <div>2. Claude AI parse & translate ke config</div>
+                            <div>3. Preview perubahan di panel kanan</div>
+                            <div>4. User klik "Terapkan"</div>
+                            <div>5. Auto-save ke DNA Repo + Git push</div>
+                            <div>6. Orchestrator → ERP auto-rebuild!</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -192,30 +356,44 @@ version: "1.2"
         <!-- Tech Stack -->
         <section class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Technology Stack</h2>
-            <div class="grid md:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-5 gap-4">
                 <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
                     <h3 class="font-bold text-lg mb-4 text-blue-600">DNA Repository</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>• GitHub (Version Control)</li>
-                        <li>• Markdown + YAML Frontmatter</li>
-                        <li>• GitHub Actions (CI/CD)</li>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li>• GitHub</li>
+                        <li>• Markdown + YAML</li>
+                        <li>• Webhooks</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover border-2 border-purple-200">
+                    <h3 class="font-bold text-lg mb-4 text-purple-600">AI Layer</h3>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li>• <strong>Claude AI</strong></li>
+                        <li>• Anthropic SDK</li>
+                        <li>• Natural Language</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 card-hover border-2 border-orange-200">
+                    <h3 class="font-bold text-lg mb-4 text-orange-600">UI Automate</h3>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li>• @dnd-kit</li>
+                        <li>• React Grid</li>
+                        <li>• Auto-generate</li>
                     </ul>
                 </div>
                 <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-                    <h3 class="font-bold text-lg mb-4 text-purple-600">Orchestrator</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>• Node.js + Express</li>
-                        <li>• Webhook Receiver</li>
-                        <li>• DNA Parser (gray-matter)</li>
-                        <li>• PM2 (Process Manager)</li>
+                    <h3 class="font-bold text-lg mb-4 text-yellow-600">Orchestrator</h3>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li>• Node.js</li>
+                        <li>• Express</li>
+                        <li>• PM2</li>
                     </ul>
                 </div>
                 <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
-                    <h3 class="font-bold text-lg mb-4 text-green-600">ERP Web Application</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>• Next.js 14 (React Framework)</li>
+                    <h3 class="font-bold text-lg mb-4 text-green-600">ERP Web</h3>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li>• Next.js 14</li>
                         <li>• TypeScript</li>
-                        <li>• Prisma ORM + SQLite</li>
                         <li>• Tailwind CSS</li>
                     </ul>
                 </div>
@@ -225,61 +403,129 @@ version: "1.2"
         <!-- Demo Links -->
         <section class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Demo Links</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <a href="http://103.93.130.17:5000" target="_blank" class="block bg-white rounded-xl shadow-lg p-6 card-hover border-2 border-transparent hover:border-blue-500">
-                    <div class="text-3xl mb-3">🏠</div>
-                    <h3 class="font-bold text-lg mb-2">ERP Dashboard</h3>
-                    <p class="text-gray-500 text-sm">http://103.93.130.17:5000</p>
+            <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <a href="http://103.93.130.17:5000/dna/layout-editor" target="_blank" class="block bg-gradient-to-r from-orange-500 to-pink-500 text-white rounded-xl shadow-lg p-4 card-hover">
+                    <div class="text-2xl mb-2">🎨</div>
+                    <h3 class="font-bold text-sm mb-1">Layout Editor</h3>
+                    <p class="text-orange-100 text-xs">UI Automate</p>
                 </a>
-                <a href="http://103.93.130.17:5000/dna" target="_blank" class="block bg-white rounded-xl shadow-lg p-6 card-hover border-2 border-transparent hover:border-purple-500">
-                    <div class="text-3xl mb-3">⚙️</div>
-                    <h3 class="font-bold text-lg mb-2">DNA Config</h3>
-                    <p class="text-gray-500 text-sm">http://103.93.130.17:5000/dna</p>
+                <a href="http://103.93.130.17:5000/dna/edit" target="_blank" class="block bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl shadow-lg p-4 card-hover">
+                    <div class="text-2xl mb-2">🤖</div>
+                    <h3 class="font-bold text-sm mb-1">AI Editor</h3>
+                    <p class="text-blue-100 text-xs">AI Layer</p>
                 </a>
-                <a href="https://github.com/taufik-gg/dna-repo" target="_blank" class="block bg-white rounded-xl shadow-lg p-6 card-hover border-2 border-transparent hover:border-gray-500">
-                    <div class="text-3xl mb-3">📄</div>
-                    <h3 class="font-bold text-lg mb-2">DNA Repository</h3>
-                    <p class="text-gray-500 text-sm">github.com/taufik-gg/dna-repo</p>
+                <a href="http://103.93.130.17:5000/dna/layouts" target="_blank" class="block bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-xl shadow-lg p-4 card-hover">
+                    <div class="text-2xl mb-2">📋</div>
+                    <h3 class="font-bold text-sm mb-1">View Layouts</h3>
+                    <p class="text-green-100 text-xs">Preview</p>
                 </a>
-                <a href="https://github.com/taufik-gg/dna-erp-web" target="_blank" class="block bg-white rounded-xl shadow-lg p-6 card-hover border-2 border-transparent hover:border-green-500">
-                    <div class="text-3xl mb-3">💻</div>
-                    <h3 class="font-bold text-lg mb-2">ERP Web Repository</h3>
-                    <p class="text-gray-500 text-sm">github.com/taufik-gg/dna-erp-web</p>
+                <a href="http://103.93.130.17:5000/dna" target="_blank" class="block bg-white rounded-xl shadow-lg p-4 card-hover border-2 border-transparent hover:border-purple-500">
+                    <div class="text-2xl mb-2">⚙️</div>
+                    <h3 class="font-bold text-sm mb-1">DNA Config</h3>
+                    <p class="text-gray-500 text-xs">View Rules</p>
+                </a>
+                <a href="http://103.93.130.17:5000" target="_blank" class="block bg-white rounded-xl shadow-lg p-4 card-hover border-2 border-transparent hover:border-blue-500">
+                    <div class="text-2xl mb-2">🏠</div>
+                    <h3 class="font-bold text-sm mb-1">Dashboard</h3>
+                    <p class="text-gray-500 text-xs">ERP Main</p>
+                </a>
+                <a href="https://github.com/taufik-gg/dna-repo" target="_blank" class="block bg-white rounded-xl shadow-lg p-4 card-hover border-2 border-transparent hover:border-gray-500">
+                    <div class="text-2xl mb-2">📄</div>
+                    <h3 class="font-bold text-sm mb-1">DNA Repo</h3>
+                    <p class="text-gray-500 text-xs">GitHub</p>
                 </a>
             </div>
         </section>
 
-        <!-- Demo Scenario -->
+        <!-- Demo Scenarios -->
         <section class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Skenario Demo</h2>
-            <div class="bg-white rounded-xl shadow-lg p-8">
-                <div class="space-y-6">
-                    <div class="flex items-start gap-4">
-                        <div class="step-number bg-blue-500 text-white flex-shrink-0">1</div>
-                        <div>
-                            <h3 class="font-bold text-lg">Buka ERP Dashboard</h3>
-                            <p class="text-gray-600">Akses <a href="http://103.93.130.17:5000/dna" class="text-blue-500 underline" target="_blank">http://103.93.130.17:5000/dna</a> dan perhatikan nilai threshold saat ini (versi 1.2)</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Scenario 1: UI Automate -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="font-bold text-xl mb-4 text-orange-600 flex items-center gap-2">
+                        <span>🎨</span> Demo UI Automate
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <div class="step-number bg-orange-500 text-white text-sm flex-shrink-0">1</div>
+                            <div>
+                                <div class="font-semibold">Buka Layout Editor</div>
+                                <a href="http://103.93.130.17:5000/dna/layout-editor" class="text-blue-500 text-sm underline" target="_blank">/dna/layout-editor</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="step-number bg-orange-500 text-white text-sm flex-shrink-0">2</div>
+                            <div>
+                                <div class="font-semibold">Drag komponen ke canvas</div>
+                                <div class="text-sm text-gray-600">Summary Card, Table, Chart</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="step-number bg-orange-500 text-white text-sm flex-shrink-0">3</div>
+                            <div>
+                                <div class="font-semibold">Atau gunakan AI Chat</div>
+                                <div class="text-sm text-gray-600">"Tambahkan 3 summary card"</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="step-number bg-orange-500 text-white text-sm flex-shrink-0">4</div>
+                            <div>
+                                <div class="font-semibold">Save to DNA</div>
+                                <div class="text-sm text-gray-600">Auto-commit & deploy</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="step-number bg-orange-500 text-white text-sm flex-shrink-0">5</div>
+                            <div>
+                                <div class="font-semibold">Lihat hasil di View Layouts</div>
+                                <a href="http://103.93.130.17:5000/dna/layouts" class="text-blue-500 text-sm underline" target="_blank">/dna/layouts</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex items-start gap-4">
-                        <div class="step-number bg-yellow-500 text-white flex-shrink-0">2</div>
-                        <div>
-                            <h3 class="font-bold text-lg">Edit DNA File di GitHub</h3>
-                            <p class="text-gray-600">Buka <a href="https://github.com/taufik-gg/dna-repo/blob/main/rules/approval-thresholds.md" class="text-blue-500 underline" target="_blank">rules/approval-thresholds.md</a>, klik Edit, ubah threshold (misal: 500,000 → 1,000,000)</p>
+                </div>
+
+                <!-- Scenario 2: AI Layer -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="font-bold text-xl mb-4 text-purple-600 flex items-center gap-2">
+                        <span>🤖</span> Demo AI Layer
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <div class="step-number bg-purple-500 text-white text-sm flex-shrink-0">1</div>
+                            <div>
+                                <div class="font-semibold">Buka DNA Config</div>
+                                <a href="http://103.93.130.17:5000/dna" class="text-blue-500 text-sm underline" target="_blank">/dna</a>
+                                <div class="text-sm text-gray-600">Catat nilai threshold saat ini</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="step-number bg-purple-500 text-white flex-shrink-0">3</div>
-                        <div>
-                            <h3 class="font-bold text-lg">Commit Changes</h3>
-                            <p class="text-gray-600">Commit perubahan dengan pesan yang jelas (misal: "Update threshold to 1M")</p>
+                        <div class="flex items-start gap-3">
+                            <div class="step-number bg-purple-500 text-white text-sm flex-shrink-0">2</div>
+                            <div>
+                                <div class="font-semibold">Buka AI Editor</div>
+                                <a href="http://103.93.130.17:5000/dna/edit" class="text-blue-500 text-sm underline" target="_blank">/dna/edit</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="step-number bg-green-500 text-white flex-shrink-0">4</div>
-                        <div>
-                            <h3 class="font-bold text-lg">Tunggu ~1 Menit</h3>
-                            <p class="text-gray-600">Sistem akan otomatis: webhook trigger → parse DNA → rebuild → restart. Refresh halaman DNA Config untuk melihat perubahan!</p>
+                        <div class="flex items-start gap-3">
+                            <div class="step-number bg-purple-500 text-white text-sm flex-shrink-0">3</div>
+                            <div>
+                                <div class="font-semibold">Ketik perintah</div>
+                                <code class="text-sm bg-gray-100 px-2 py-1 rounded">"Ubah threshold manager jadi 3 juta"</code>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="step-number bg-purple-500 text-white text-sm flex-shrink-0">4</div>
+                            <div>
+                                <div class="font-semibold">Review & Terapkan</div>
+                                <div class="text-sm text-gray-600">Klik "Terapkan Perubahan"</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="step-number bg-purple-500 text-white text-sm flex-shrink-0">5</div>
+                            <div>
+                                <div class="font-semibold">Verifikasi (~1 menit)</div>
+                                <div class="text-sm text-gray-600">Refresh DNA Config, lihat perubahan!</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -289,66 +535,26 @@ version: "1.2"
         <!-- Benefits -->
         <section class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Keuntungan Bisnis</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-xl p-6 card-hover">
-                    <div class="text-4xl mb-4">⚡</div>
-                    <h3 class="font-bold text-xl mb-2">Faster Time-to-Market</h3>
-                    <p class="opacity-90">Perubahan business rules dapat diterapkan dalam hitungan menit, bukan hari atau minggu</p>
-                </div>
-                <div class="bg-gradient-to-br from-green-500 to-green-600 text-white rounded-xl p-6 card-hover">
-                    <div class="text-4xl mb-4">💰</div>
-                    <h3 class="font-bold text-xl mb-2">Reduced IT Costs</h3>
-                    <p class="opacity-90">Mengurangi ketergantungan pada developer untuk perubahan konfigurasi sederhana</p>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-xl p-6 card-hover">
+                    <div class="text-4xl mb-4">🎨</div>
+                    <h3 class="font-bold text-xl mb-2">UI Automate</h3>
+                    <p class="opacity-90 text-sm">Desain UI tanpa coding, drag & drop</p>
                 </div>
                 <div class="bg-gradient-to-br from-purple-500 to-purple-600 text-white rounded-xl p-6 card-hover">
-                    <div class="text-4xl mb-4">📋</div>
-                    <h3 class="font-bold text-xl mb-2">Single Source of Truth</h3>
-                    <p class="opacity-90">Dokumentasi SOP dan implementasi sistem selalu sinkron secara otomatis</p>
+                    <div class="text-4xl mb-4">🤖</div>
+                    <h3 class="font-bold text-xl mb-2">AI-Powered</h3>
+                    <p class="opacity-90 text-sm">Claude AI menerjemahkan bahasa manusia</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Use Cases -->
-        <section class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Potensi Use Cases</h2>
-            <div class="bg-white rounded-xl shadow-lg p-8">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-3">
-                            <span class="text-2xl">✅</span>
-                            <span>Approval Workflow & Thresholds</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-2xl">✅</span>
-                            <span>SLA Configuration</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-2xl">✅</span>
-                            <span>Role & Permission Matrix</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-2xl">✅</span>
-                            <span>Pricing Rules & Discounts</span>
-                        </div>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-3">
-                            <span class="text-2xl">✅</span>
-                            <span>Notification Templates</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-2xl">✅</span>
-                            <span>Business Process Flows</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-2xl">✅</span>
-                            <span>Validation Rules</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <span class="text-2xl">✅</span>
-                            <span>Report Configurations</span>
-                        </div>
-                    </div>
+                <div class="bg-gradient-to-br from-green-500 to-green-600 text-white rounded-xl p-6 card-hover">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="font-bold text-xl mb-2">Fast Deploy</h3>
+                    <p class="opacity-90 text-sm">Perubahan diterapkan dalam ~1 menit</p>
+                </div>
+                <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-xl p-6 card-hover">
+                    <div class="text-4xl mb-4">👥</div>
+                    <h3 class="font-bold text-xl mb-2">Self-Service</h3>
+                    <p class="opacity-90 text-sm">Tim QM bisa edit sendiri tanpa IT</p>
                 </div>
             </div>
         </section>
@@ -358,21 +564,26 @@ version: "1.2"
             <div class="gradient-bg text-white rounded-xl p-8 text-center">
                 <h2 class="text-3xl font-bold mb-4">Kesimpulan</h2>
                 <p class="text-xl opacity-90 mb-6 max-w-3xl mx-auto">
-                    DNA-Driven ERP adalah pendekatan inovatif yang memungkinkan business users untuk mengubah
-                    konfigurasi sistem hanya dengan mengedit file Markdown, tanpa perlu bantuan developer.
+                    DNA-Driven ERP dengan <strong>UI Automate</strong> dan <strong>AI Layer (Claude)</strong> memungkinkan
+                    tim non-IT mengubah <strong>tampilan UI dan business rules</strong> secara mandiri,
+                    cukup dengan <strong>drag & drop</strong> atau <strong>mengetik perintah bahasa manusia</strong>.
                 </p>
-                <div class="flex justify-center gap-8 text-center">
+                <div class="flex justify-center gap-8 text-center flex-wrap">
+                    <div>
+                        <div class="text-4xl font-bold">🎨</div>
+                        <div class="text-sm opacity-75">UI Automate</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold">🤖</div>
+                        <div class="text-sm opacity-75">Claude AI</div>
+                    </div>
                     <div>
                         <div class="text-4xl font-bold">~1 min</div>
-                        <div class="text-sm opacity-75">Deployment Time</div>
+                        <div class="text-sm opacity-75">Deploy Time</div>
                     </div>
                     <div>
                         <div class="text-4xl font-bold">0</div>
-                        <div class="text-sm opacity-75">Manual Coding</div>
-                    </div>
-                    <div>
-                        <div class="text-4xl font-bold">100%</div>
-                        <div class="text-sm opacity-75">Automated</div>
+                        <div class="text-sm opacity-75">Coding Required</div>
                     </div>
                 </div>
             </div>
@@ -383,7 +594,7 @@ version: "1.2"
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-6 text-center">
             <p class="text-gray-400">DNA-Driven ERP Demo</p>
-            <p class="text-sm text-gray-500 mt-2">Built with Next.js, Node.js, and GitHub Actions</p>
+            <p class="text-sm text-gray-500 mt-2">Built with Next.js, Claude AI, @dnd-kit, and GitHub Webhooks</p>
             <p class="text-sm text-gray-500 mt-1">January 2026</p>
         </div>
     </footer>

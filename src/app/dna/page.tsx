@@ -20,6 +20,20 @@ export default function DNAConfigPage() {
             <span>🤖</span>
             Edit dengan AI
           </Link>
+          <Link
+            href="/dna/layout-editor"
+            className="px-4 py-2 bg-gradient-to-r from-orange-500 to-pink-500 text-white rounded-lg hover:from-orange-600 hover:to-pink-600 transition-all flex items-center gap-2 font-medium"
+          >
+            <span>🎨</span>
+            Layout Editor
+          </Link>
+          <Link
+            href="/dna/layouts"
+            className="px-4 py-2 bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-lg hover:from-green-600 hover:to-teal-600 transition-all flex items-center gap-2 font-medium"
+          >
+            <span>📋</span>
+            View Layouts
+          </Link>
           <div className="text-right">
             <div className="text-sm text-gray-500">Version</div>
             <div className="font-mono text-lg">{DNA_CONFIG.version}</div>
